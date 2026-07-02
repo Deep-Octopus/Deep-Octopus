@@ -1,0 +1,104 @@
+<svg width="920" height="260" viewBox="0 0 920 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="920" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="0.55" stop-color="#0B1B2B"/>
+      <stop offset="1" stop-color="#06251B"/>
+    </linearGradient>
+    <linearGradient id="blueGreen" x1="130" y1="38" x2="790" y2="224" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58A6FF"/>
+      <stop offset="1" stop-color="#3FB950"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <path id="orbit" d="M158 130 C158 54 267 34 460 34 C653 34 762 54 762 130 C762 206 653 226 460 226 C267 226 158 206 158 130Z"/>
+    <style>
+      .title { font: 700 22px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #F0F6FC; }
+      .label { font: 700 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #F0F6FC; }
+      .sub { font: 500 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #8B949E; }
+      .node { fill: #111D2E; stroke: #30363D; stroke-width: 1.2; }
+      .ring { stroke: url(#blueGreen); stroke-width: 2.4; stroke-linecap: round; stroke-dasharray: 12 12; animation: dash 7s linear infinite; opacity: .9; }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin: center; }
+      .delay1 { animation-delay: .4s; }
+      .delay2 { animation-delay: .8s; }
+      .delay3 { animation-delay: 1.2s; }
+      .delay4 { animation-delay: 1.6s; }
+      .packet { filter: url(#glow); }
+      @keyframes dash { to { stroke-dashoffset: -96; } }
+      @keyframes pulse {
+        0%, 100% { opacity: .82; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.035); }
+      }
+    </style>
+  </defs>
+
+  <rect width="920" height="260" rx="22" fill="url(#panel)"/>
+  <rect x="1" y="1" width="918" height="258" rx="21" stroke="#30363D"/>
+  <text x="40" y="48" class="title">Agentic RL loop for LLM agents</text>
+  <text x="40" y="72" class="sub">plan -> act with tools -> observe environment -> score trajectories -> update memory</text>
+
+  <use href="#orbit" class="ring"/>
+  <circle class="packet" r="7" fill="#58A6FF">
+    <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#orbit"/>
+    </animateMotion>
+  </circle>
+  <circle class="packet" r="5" fill="#3FB950">
+    <animateMotion dur="7s" begin="2.3s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#orbit"/>
+    </animateMotion>
+  </circle>
+  <circle class="packet" r="4" fill="#F2CC60">
+    <animateMotion dur="7s" begin="4.6s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#orbit"/>
+    </animateMotion>
+  </circle>
+
+  <g class="pulse">
+    <rect class="node" x="63" y="104" width="150" height="70" rx="14"/>
+    <text x="138" y="132" text-anchor="middle" class="label">Policy</text>
+    <text x="138" y="154" text-anchor="middle" class="sub">planner + actor</text>
+  </g>
+
+  <g class="pulse delay1">
+    <rect class="node" x="288" y="28" width="150" height="70" rx="14"/>
+    <text x="363" y="56" text-anchor="middle" class="label">Tools</text>
+    <text x="363" y="78" text-anchor="middle" class="sub">code / search / APIs</text>
+  </g>
+
+  <g class="pulse delay2">
+    <rect class="node" x="566" y="28" width="170" height="70" rx="14"/>
+    <text x="651" y="56" text-anchor="middle" class="label">Environment</text>
+    <text x="651" y="78" text-anchor="middle" class="sub">state + feedback</text>
+  </g>
+
+  <g class="pulse delay3">
+    <rect class="node" x="690" y="158" width="150" height="70" rx="14"/>
+    <text x="765" y="186" text-anchor="middle" class="label">Reward</text>
+    <text x="765" y="208" text-anchor="middle" class="sub">rubrics + signals</text>
+  </g>
+
+  <g class="pulse delay4">
+    <rect class="node" x="320" y="158" width="180" height="70" rx="14"/>
+    <text x="410" y="186" text-anchor="middle" class="label">Memory</text>
+    <text x="410" y="208" text-anchor="middle" class="sub">traces + knowledge</text>
+  </g>
+
+  <path d="M218 139 H284" stroke="#58A6FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 8">
+    <animate attributeName="stroke-dashoffset" from="0" to="-42" dur="2.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M442 62 H560" stroke="#58A6FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 8">
+    <animate attributeName="stroke-dashoffset" from="0" to="-42" dur="2.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M710 102 L748 154" stroke="#3FB950" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 8">
+    <animate attributeName="stroke-dashoffset" from="0" to="-42" dur="2.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M686 193 H506" stroke="#3FB950" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 8">
+    <animate attributeName="stroke-dashoffset" from="0" to="-42" dur="2.5s" repeatCount="indefinite"/>
+  </path>
+</svg>
