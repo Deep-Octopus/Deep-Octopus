@@ -1,36 +1,34 @@
 <div align="center">
 
-# Zhang Jie / Deep-Octopus
+# Zhang Jie · Deep-Octopus
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2600&pause=900&color=58A6FF&center=true&vCenter=true&width=820&lines=Agentic+RL+for+tool-using+LLM+agents;LLM+systems%2C+evaluation+loops%2C+memory%2C+planning;Turning+research+ideas+into+usable+agent+products" alt="Typing intro" />
-
-<img src="./assets/agentic-loop.svg" alt="Agentic RL loop animation" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&duration=2800&pause=1100&color=58A6FF&center=true&vCenter=true&width=760&lines=Agentic+RL+%2F+LLM+agents+%2F+evaluation+systems;Building+research+tools+with+clear+feedback+loops" alt="Typing intro" />
 
 <p>
-  <a href="https://github.com/Deep-Octopus?tab=followers"><img src="https://img.shields.io/github/followers/Deep-Octopus?style=for-the-badge&logo=github&label=Followers&color=0969da" alt="GitHub followers"></a>
-  <a href="https://github.com/Deep-Octopus"><img src="https://komarev.com/ghpvc/?username=Deep-Octopus&style=for-the-badge&color=238636" alt="Profile views"></a>
-  <img src="https://img.shields.io/badge/Focus-Agentic%20RL%20%7C%20LLM%20Agents%20%7C%20AI%20Systems-0D1117?style=for-the-badge" alt="Focus">
+  <a href="https://github.com/Deep-Octopus?tab=followers"><img src="https://img.shields.io/github/followers/Deep-Octopus?style=flat-square&logo=github&label=followers&color=0969da" alt="GitHub followers"></a>
+  <a href="https://github.com/Deep-Octopus"><img src="https://komarev.com/ghpvc/?username=Deep-Octopus&style=flat-square&color=238636" alt="Profile views"></a>
+  <img src="https://img.shields.io/badge/focus-Agentic%20RL%20%2B%20LLM%20agents-0D1117?style=flat-square" alt="Focus">
 </p>
 
 </div>
 
 ## Current Focus
 
-I am focused on Agentic RL and LLM systems: how agents plan, call tools, use memory, learn from trajectories, and get evaluated with reliable reward and feedback loops. I care about the engineering layer that turns research ideas into products people can actually use.
+I am focused on Agentic RL and LLM agent engineering: tool-use trajectories, reward and feedback design, evaluation, memory, and observability. I care about the part where research ideas become systems that can be tested, debugged, and improved.
 
 <table>
   <tr>
     <td width="33%">
       <strong>Agentic RL</strong><br>
-      Tool-use trajectories, reward signals, exploration, credit assignment, and evaluation loops for agents.
+      Tool-use trajectories, reward signals, exploration, credit assignment, and agent evaluation.
     </td>
     <td width="33%">
       <strong>LLM Agents</strong><br>
-      Planning, memory, retrieval, tool calling, multi-step reasoning, and human-in-the-loop workflows.
+      Planning, memory, retrieval, tool calling, multi-step reasoning, and human feedback.
     </td>
     <td width="33%">
-      <strong>AI Products</strong><br>
-      Research assistants, workflow automation, dashboards, and lightweight full-stack prototypes.
+      <strong>Systems</strong><br>
+      Tracing, reports, dashboards, and interfaces that make agent behavior easier to inspect.
     </td>
   </tr>
 </table>
